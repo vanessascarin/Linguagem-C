@@ -1,0 +1,19 @@
+//Algoritmo velocidade usando V=sqrt(Vo**2 + 2*a*DS)
+
+#include<stdio.h>
+#include<math.h>
+#include<locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+float V, Vo, a, DS, S, So;
+
+puts("Entre com os valores de Vo, a, S e So. \n");
+scanf("%f %f %f %f", &Vo, &a, &S, &So);
+DS=S-So;
+V=sqrt(pow(Vo,2) + 2*a*DS);
+
+printf("A velocidade é: %.2f. \n", V);
+
+}
