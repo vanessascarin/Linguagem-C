@@ -1,0 +1,29 @@
+/*Escreva um programa que resolva o seguinte problema: uma cópia "xerox"
+custa R$0,25 por folha, mas acima de 100 cópias esse valor cai para
+R$0,20 por unidade. Dado o total de cópias, informe o valor a ser pago.*/
+
+#include<stdio.h>
+#include <locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+float preco, copias, promo;;
+
+
+printf("Insira a quantidade de cópias. \n");
+scanf("%f", &copias);
+
+promo=copias-100;
+
+if(promo<0){
+    preco=copias*0.25;
+    printf("Preço total: R$%.2f. \n", preco);}
+    else{
+        printf("Quantidade de cópias com preço promocional: %.2f \n", promo);
+        preco=(25)+(promo*0.20);
+        printf("Preço total: R$%.2f. \n", preco);
+    }
+
+
+}
