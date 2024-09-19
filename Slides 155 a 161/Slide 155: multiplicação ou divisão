@@ -1,0 +1,30 @@
+/*Faça um programa para realizar a multiplicação ou a divisão. O
+usuário deverá entrar com a opção de qual operação ele deseja fazer e
+entrar com os valores das variáveis que serão utilizadas nas
+multiplicação ou na divisão.*/
+
+#include<stdio.h>
+#include <locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+int opcao;
+float num1, num2, resultado;
+
+printf("Escolha qual operação será realizada: \n 1. MULTIPLICAÇÃO \n 2. DIVISÃO. \n");
+scanf("%d", &opcao);
+printf("Insira os dois números a serem operados: \n");
+scanf("%f %f", &num1, &num2);
+if (opcao==1){
+        resultado=num1*num2;
+        printf("O resultado da multiplicação é: %.2f. \n", resultado);
+        }
+        else if (opcao==2){
+            resultado=num1/num2;
+            printf("O resultado da divisão é: %.2f. \n", resultado);
+        }
+        else
+            printf("Opção inválida. \n");
+
+}
