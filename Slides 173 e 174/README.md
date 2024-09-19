@@ -1,1 +1,1 @@
-Exercícios para treinar switch case, getchar
+Exercícios para treinar switch case, x=getchar(), getch ()
