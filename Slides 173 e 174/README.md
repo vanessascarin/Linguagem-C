@@ -1,1 +1,1 @@
-Exercícios para treinar switch case
+Exercícios para treinar switch case, getchar
