@@ -1,0 +1,28 @@
+/*Fazer um programa para uma matriz 2x2 com os valores sendo digitados pelo usuário:*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+int i, j, A[2][2];
+
+for(i=0; i < 2; i++)
+    {for(j=0; j < 2; j++)
+    {
+        printf("\n Digite o número para o elemento A[%d] [%d]", i, j);
+        scanf("%d", &A[i][j]);
+
+    }
+    }
+
+printf("\n");
+for(i=0; i < 2; i++)
+    {for(j=0; j < 2; j++)
+       {
+    	printf("\t %d", A[i][j]);
+	   getch();
+       }
+       printf("\n");
+       }
+ getch();}
