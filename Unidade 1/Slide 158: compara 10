@@ -1,0 +1,27 @@
+/*Faça um programa em C que leia dois valores numéricos e efetue a adição.
+Caso o valor somado seja maior ou igual a 10, deverá ser apresentado esse
+valor acrescido de 5. Caso o valor seja menor que 10, deverá ser apresentado
+esse valor subtraído de 7.*/
+
+#include<stdio.h>
+#include <locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+float x, y, soma, result;
+
+printf("Insira dois valores. \n");
+scanf("%f %f", &x, &y);
+soma=x+y;
+
+if(soma>=10){
+    result=soma+5;
+    printf("A soma destes dois valores +5 é %.2f. \n", result);
+}
+else {
+    result=soma-7;
+    printf("A soma destes dois valores -7 é %.2f. \n", result);
+}
+
+}
