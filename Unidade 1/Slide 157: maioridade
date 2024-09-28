@@ -1,0 +1,19 @@
+//Fazer um programa em C que leia a idade de uma pessoa e informe se ela é maior ou menor de idade.
+
+#include<stdio.h>
+#include <locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+int idade;
+
+printf("Insira uma idade. \n");
+scanf("%d",&idade);
+
+if(idade<18)
+    printf("Uma pessoa de %d ano(s) é menor de idade. \n", idade);
+    else
+        printf("Uma pessoa de %d anos é maior de idade. \n", idade);
+
+}
