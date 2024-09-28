@@ -1,0 +1,24 @@
+/*Calcular e a raiz quadrada de um número.
+Esse programa deverá informar que não é possível calcular raiz quadrada
+de número negativo.*/
+
+#include<stdio.h>
+#include <locale.h>
+
+main(){
+
+setlocale(LC_ALL,"");
+float num, x;
+
+printf("Insira um número para calcular sua raíz quadrada. \n");
+scanf("%f", &num);
+
+if(num<0)
+    printf("Não é possível calcular raíz quadrada de número negativo! \n");
+    else {
+        x=sqrt(num);
+        printf("A raíz quadrada de %.2f é %.2f. \n", num,x);
+    }
+
+
+}
