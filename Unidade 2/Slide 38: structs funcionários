@@ -16,15 +16,13 @@ int main(){
 setlocale(LC_ALL, "Portuguese");
 int i=1;
 
-typedef struct {
+struct ficha{
 int matricula;
 char nome[50];
 float salario;
 char endrua[20];
 int endnum[5];
-} ficha;
-
-ficha func[2];
+} func[2];
 
 do {
     printf("\t CADASTRO DO FUNCIONÁRIO %d \n", i);
