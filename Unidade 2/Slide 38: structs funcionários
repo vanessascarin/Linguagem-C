@@ -1,0 +1,53 @@
+/*Crie uma estrutura de dados com os seguintes campos:
+    Matrícula (variável do tipo int)
+    Nome do Funcionario (variável do tipo string)
+    Salario (variável do tipo float)
+    Endereço do funcionário contendo o nome da rua (variável do tipo string)
+    Numero da casa (variável do tipo int)
+Essa estrutura deverá cadastrar dois funcionários diferentes*/
+
+
+
+#include<stdio.h>
+#include<locale.h>
+
+int main(){
+
+setlocale(LC_ALL, "Portuguese");
+int i=1;
+
+typedef struct {
+int matricula;
+char nome[50];
+float salario;
+char endrua[20];
+int endnum[5];
+} ficha;
+
+ficha func[2];
+
+do {
+    printf("\t CADASTRO DO FUNCIONÁRIO %d \n", i);
+    func[i-1].matricula=i;
+    printf("Insira o nome: \n");
+    gets(func[i-1].nome);
+    printf("Insira o salario: \n");
+    scanf("%f", &func[i-1].salario);
+    printf("Insira a rua do endereço: \n");
+    fflush(stdin);
+    gets(func[i-1].endrua);
+    printf("Insira o número do endereço: \n");
+    fflush(stdin);
+    gets(func[i-1].endnum);
+
+    printf("\n\t CONFIRMAÇÃO DAS INFORMAÇÕES DO FUNCIONÁRIO %d: \n",i);
+    printf("Matrícula: %d \n", func[i-1].matricula);
+    printf("Nome: %s \n", func[i-1].nome);
+    printf("Salário: R$%.2f \n", func[i-1].salario);
+    printf("Endereço - \n");
+    printf("Rua: %s \n", func[i-1].endrua);
+    printf("Número: %s \n\n", func[i-1].endnum);
+    i++;
+} while (i<3);
+
+}
