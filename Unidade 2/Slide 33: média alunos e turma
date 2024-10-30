@@ -1,0 +1,27 @@
+/*Em dada turma há 5 alunos, e cada um realizou três
+provas. Calcule a média de cada aluno e a média da turma*/
+
+#include<stdio.h>
+#include<locale.h>
+
+int main(){
+
+setlocale(LC_ALL, "pt_BR");
+
+int notas[5][3]={{5,5,5},{6,7,8},{4,5,6},{8,8,8},{9,7,9}};
+int l,c;
+float mediaaluno[5],mediaturma;
+
+for(l=0;l<5;l++){
+    for(c=0;c<3;c++){
+        mediaaluno[l]=mediaaluno[l]+notas[l][c];
+    }
+    mediaaluno[l]=(mediaaluno[l])/3;
+    printf(" A media do aluno %d eh: %.2f \n",l,mediaaluno[l]);
+    mediaturma=mediaturma+mediaaluno[l];
+}
+
+mediaturma=(mediaturma)/5;
+printf("\n A media da turma como um todo eh: %.2f \n",mediaturma);
+
+}
