@@ -1,0 +1,32 @@
+/*6- Fazer um programa para realizar a soma de duas
+matrizes A e B, onde os valores das matrizes A e B são:
+
+Matriz_A[0][0]=1; Matriz_A[0][1]=2; Matriz_A[1][0]=3; Matriz_A[1][1]=4;
+Matriz_B[0][0]=1; Matriz_B[0][1]=2; Matriz_B[1][0]=3; Matriz_B[1][1]=4;
+*/
+
+#include<stdio.h>
+#include<locale.h>
+
+main(){
+
+setlocale(LC_ALL,"Portuguese");
+
+int A[2][2]={{1,2},{3,4}}, B[2][2]={{1,2},{3,4}},S[2][2],l,c;
+
+for (l=0;l<2;l++){
+    for (c=0;c<2;c++){
+        S[l][c]=A[l][c]+B[l][c];
+    }
+}
+
+printf("A= \t\t\t B= \t\t\t S= \n");
+
+for (l=0;l<2;l++){
+    for (c=0;c<1;c++){
+        printf("|%d \t %d| \t\t |%d \t %d| \t\t |%d \t %d| \n", A[l][c],A[l][c+1],B[l][c],B[l][c+1],S[l][c],S[l][c+1]);
+    }
+}
+
+return;
+}
