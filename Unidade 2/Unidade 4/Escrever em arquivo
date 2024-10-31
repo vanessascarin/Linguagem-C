@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+int main(){
+
+FILE *file=fopen("dados.txt","w");
+fprintf(file,"texto novo");
+fclose(file);
+
+}
