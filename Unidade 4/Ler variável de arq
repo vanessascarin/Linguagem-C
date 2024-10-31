@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+
+FILE *file=fopen("nomeidade.txt","r");
+
+int idade=24;
+char nome[]="Vanessa";
+
+fscanf(file,"%d %s", &idade, nome);
+
+printf("Idade: %2d anos, Nome: %s.", idade, nome);
+fclose(file);
+
+}
