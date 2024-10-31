@@ -1,0 +1,21 @@
+/*Exercício 3
+Faça um programa criar um vetor do tipo inteiro com 5 elementos.
+Crie um ponteiro *pont para que o código imprima o endereço do
+primeiro elemento do vetor. O código deve imprimir também o valor
+de todos os elementos do vetor.*/
+
+
+#include <stdio.h>
+
+int main(){
+
+int vetor[5]={1,2,3,4,5},*pv,i;
+
+pv=&vetor[0];
+
+printf("\n O endereco do primeiro elemento do vetor eh: %p", pv);
+for(i=0;i<5;i++){
+    printf("\n vetor[%d]=%d",i,vetor[i]);
+
+}
+}
