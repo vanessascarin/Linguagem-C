@@ -1,0 +1,22 @@
+/*Exercício 2
+Faça um programa para somar duas variáveis a e b do tipo float
+ utilizando o conceito de ponteiro (soma de modo indireto). Mostre
+ o valor e o endereço das 3 variáveis (a, b e s) utilizando um ponteiro *px.*/
+
+ #include <stdio.h>
+
+ int main(){
+    float a,b,s,*pa,*pb,*ps;
+
+    pa=&a;
+    pb=&b;
+    ps=&s;
+    printf("\n Insira um valor para a= \n");
+    scanf("%f",&a);
+    printf("\n Insira um valor para b= \n");
+    scanf("%f",&b);
+    *ps=*pa+*pb;
+    printf("\n O valor de a eh %.2f e seu endereço eh: %p. \n",*pa,pa);
+    printf("\n O valor de b eh %.2f e seu endereço eh: %p. \n",*pb,pb);
+    printf("\n O valor da soma e a e b eh %.2f e seu endereço eh: %p. \n",*ps,ps);
+ }
