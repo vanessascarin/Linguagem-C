@@ -1,0 +1,55 @@
+/* Modifique o exercício anterior colocando o endereço do funcionário em uma estrutura filha
+Matrícula (variável do tipo int)
+Nome do Funcionario (variável do tipo string)
+Salario (variável do tipo float)
+Estrutura Endereço contendo o nome da rua (variável do tipo string)
+Estrutura Endereço contendo o número da casa (variável do tipo int)
+Essa estrutura deverá cadastrar dois funcionários diferentes */
+
+
+#include<stdio.h>
+#include<locale.h>
+
+int main(){
+
+setlocale(LC_ALL, "Portuguese");
+int i=1;
+
+struct endereco{
+    char rua[20];
+    int num;
+};
+
+struct ficha{
+int matricula;
+char nome[50];
+float salario;
+struct endereco end;
+} func[2];
+
+do {
+    printf("\t CADASTRO DO FUNCIONÁRIO %d \n", i);
+    func[i-1].matricula=i;
+    printf("Insira o nome: \n");
+    fflush(stdin);
+    gets(func[i-1].nome);
+    printf("Insira o salario: \n");
+    scanf("%f", &func[i-1].salario);
+    printf("Insira a rua do endereço: \n");
+    fflush(stdin);
+    gets(func[i-1].end.rua);
+    printf("Insira o número do endereço: \n");
+    fflush(stdin);
+    scanf("%d",&func[i-1].end.num);
+
+    printf("\n\t CONFIRMAÇÃO DAS INFORMAÇÕES DO FUNCIONÁRIO %d: \n",i);
+    printf("Matrícula: %d \n", func[i-1].matricula);
+    printf("Nome: %s \n", func[i-1].nome);
+    printf("Salário: R$%.2f \n", func[i-1].salario);
+    printf("Endereço - \n");
+    printf("Rua: %s \n", func[i-1].end.rua);
+    printf("Número: %d \n\n", func[i-1].end.num);
+    i++;
+} while (i<3);
+
+}
