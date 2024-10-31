@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+       int y, *pt;
+       y=2;
+       pt=&y;
+       printf("y=%d",y);
+       printf("\ny=%d",*pt);
+       printf("\n pt=%p",pt);
+       printf("\n pt=%p",&y);
+       *pt=5;
+       printf("\ny=%d",y);
+       printf("\ny=%d",*pt);
+       printf("\n Endereço do ponteiro pt=%p",&pt);
+       getch();
+	   }
