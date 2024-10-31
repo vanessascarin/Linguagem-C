@@ -1,0 +1,23 @@
+/*Exercício 4
+Faça um programa criar uma matriz 3X3 do tipo inteiro com 9 elementos.
+Crie um ponteiro *pont para que o código imprima o endereço do segundo
+elemento da matriz. O código deve imprimir também o valor de todos os elementos da matriz.*/
+
+#include <stdio.h>
+
+int main(){
+
+int matriz[3][3]={{1,2,3},
+                  {4,5,6},
+                  {7,8,9}},*pont,i,j;
+
+pont=&matriz[0];
+
+printf("\n O endereco do primeiro elemento da matriz eh: %p", pont);
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){
+        printf("\n matriz[%d][%d]=%d",i,j,matriz[i][j]);
+    }
+}
+}
+
