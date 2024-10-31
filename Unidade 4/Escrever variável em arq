@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main(){
+
+FILE *file=fopen("nomeidade.txt","w");
+
+int idade=24;
+char nome[]="Vanessa";
+
+fprintf(file,"Idade: %2d anos, Nome: %s.", idade, nome);
+fclose(file);
+
+}
