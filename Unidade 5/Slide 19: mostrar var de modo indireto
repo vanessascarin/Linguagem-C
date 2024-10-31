@@ -1,0 +1,19 @@
+/*Exercício 1
+Faça um programa para mostrar o endereço de duas variáveis x (int) e y (float).
+Utilizando o conceito de ponteiro, mostre o valor dessas variáveis (x=10, y=1.2)
+de um modo indireto, ou seja através do ponteiro.*/
+
+#include<stdio.h>
+
+int main(){
+
+int x=10, *px;
+float y=1.2, *py;
+
+px=&x;
+py=&y;
+
+printf("x=%d\n", *px);
+printf("y=%.2f", *py);
+
+}
